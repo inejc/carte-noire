@@ -6,7 +6,7 @@ summary:    Solution for a Kaggle competition.
 categories: deeplearning
 thumbnail:
 tags:
- - Kaggle
+ - kaggle
  - competition
 ---
 

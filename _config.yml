@@ -4,7 +4,7 @@ email: nejc.ilenic@gmail.com
 description: "A personal blog."
 baseurl: ""
 url: "https://inejc.github.io"
-title_description: "I am currently an MSc student in computer science at University of Ljubljana, Slovenia. After graduation I aspire to pursue a career as a data scientist."
+title_description: "Computer scientist interested in machine learning and statistics. I enjoy participating in <a href=\"https://www.kaggle.com/nejc92\" target=\"_blank\">Kaggle competitions</a>."
 title_image: "https://pbs.twimg.com/profile_images/806549822257897472/eLAHFtzv_400x400.jpg"
 google_analytics: "UA-104422096-1"
 disqus_account:
