@@ -3,11 +3,12 @@ layout:     post
 title:      Painter by Numbers (Kaggle)
 date:       2016-11-17 23:30:00
 summary:    Solution for a Kaggle competition.
-categories: deeplearning
+categories: kaggle
 thumbnail: paint-brush
 tags:
  - kaggle
  - competition
+ - deeplearning
 ---
 
 <p align="center">

@@ -6,6 +6,7 @@ summary:    Mathematics Developers Survey (a Bayesian approach).
 categories: statistics
 thumbnail: density
 tags:
+ - statistics
  - bayesian
  - inference
 ---
