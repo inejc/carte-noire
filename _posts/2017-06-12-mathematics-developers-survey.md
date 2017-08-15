@@ -41,7 +41,7 @@ In **Figure 2** a posterior predictive check is shown. Sampling distributions of
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/inejc/math-devs-survey/master/2016/plots/job_satisfaction_countries_comparison_posterior_check.png"/>
-    <b align="center">Figure 2: Job satisfaction among countries posterior predictive check. Densities are sampling distributions of log odds of the answer <i>I love my job</i> calculated from posterior predictive samples of the same sizes as the observed samples. Red lines indicate the observed log odds.</b>
+    <b align="center">Figure 2: Job satisfaction among countries posterior predictive check. Densities are sampling distributions of log odds of the answer <i>I love my job</i>, calculated from posterior predictive samples of the same sizes as the observed samples. Red lines indicate the observed log odds.</b>
 </p>
 
 Result of the sampling is depicted in **Figure 3**. Plotted are 90% confidence intervals for posterior probabilities of the answer _I love my job_ for all countries. It can be concluded that there are either no meaningful differences among the countries regarding the probability of someone loving her job, or we simply can't answer the question with this dataset. We can, however, take a more indirect approach by estimating which variables are positively correlated with job satisfaction, and compare those among groups instead.
@@ -93,7 +93,7 @@ Posterior predictive check is available in **Figure 8**. Sampling distributions 
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/inejc/math-devs-survey/master/2016/plots/purchasing_power_countries_posterior_check.png"/>
-    <b align="center">Figure 8: Purchasing power among countries posterior predictive check. Densities are sampling distributions of means of posterior predictive samples of the same sizes as the observed samples. Red lines indicate the observed means.</b>
+    <b align="center">Figure 8: Purchasing power among countries posterior predictive check. Densities are sampling distributions of means of posterior predictive samples (of the same sizes as the observed samples). Red lines indicate the observed means.</b>
 </p>
 
 Result of the sampling can be seen in **Figure 9**. Plotted are 90% confidence intervals for purchasing power posterior means for all countries. We won't calculate exact probabilities of comparisons of means (although we could, we have the posterior distributions), but rather compare them visually. Mean purchasing power is higher in _United States_ and _Australia_ than in all other countries (more than 20000 Big Macs per year). _United Kingdom_ has higher mean purchasing power than all other countries (excluding _United States_ and _Australia_) and seems similar to _Switzerland_'s, although level of uncertainty is much higher for the latter due to a smaller sample size. _Canada_, _Germany_ and all countries with less than 35 respondents combined have higher mean purchasing power than _Italy_.
@@ -117,7 +117,7 @@ In **Figure 11** a posterior predictive check is depicted. Like previously, samp
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/inejc/math-devs-survey/master/2016/plots/job_satisfaction_industries_comparison_posterior_check.png"/>
-    <b align="center">Figure 11: Job satisfaction among industries posterior predictive check. Densities are sampling distributions of log odds of the answer <i>I love my job</i> calculated from posterior predictive samples of the same sizes as the observed samples. Red lines indicate the observed log odds.</b>
+    <b align="center">Figure 11: Job satisfaction among industries posterior predictive check. Densities are sampling distributions of log odds of the answer <i>I love my job</i>, calculated from posterior predictive samples of the same sizes as the observed samples. Red lines indicate the observed log odds.</b>
 </p>
 
 Result of the sampling is shown in **Figure 12**. Plotted are 90% confidence intervals for posterior probabilities of the answer _I love my job_ for all industries. The only speculations we can make with this data is that for the _Software Products_ and _Education_ domains, the probability of the answer _I love my job_ seems higher than for the _Finance/Banking_ domain (although we will stay conservative and not make any claims).
@@ -133,7 +133,7 @@ Posterior predictive check for the hierarchical normal model is in **Figure 13**
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/inejc/math-devs-survey/master/2016/plots/purchasing_power_industries_posterior_check.png"/>
-    <b align="center">Figure 13: Purchasing power among industries posterior predictive check. Densities are sampling distributions of means of posterior predictive samples of the same sizes as the observed samples. Red lines indicate the observed means.</b>
+    <b align="center">Figure 13: Purchasing power among industries posterior predictive check. Densities are sampling distributions of means of posterior predictive samples (of the same sizes as the observed samples). Red lines indicate the observed means.</b>
 </p>
 
 Result of the sampling is available in **Figure 14**. Plotted are 90% confidence intervals for purchasing power posterior means for all industries. We are most certain that mean purchasing power is higher in _Finance/Banking_ than in all other domains (with two exceptions: the _Internet_ and _Media/Advertising_ domains). Mathematics developers in _Education_ have lower mean purchasing power than those in the _Software Products, _Media/Advertising_, _Internet_, _Healthcare_ and _Finance/Banking_ domains. There are no meaningful differences in remaining industries.
