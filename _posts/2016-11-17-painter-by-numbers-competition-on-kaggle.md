@@ -4,7 +4,7 @@ title:      Painter by Numbers (Kaggle)
 date:       2016-11-17 23:30:00
 summary:    Solution for a Kaggle competition.
 categories: deeplearning
-thumbnail:
+thumbnail: paint-brush
 tags:
  - kaggle
  - competition

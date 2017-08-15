@@ -4,7 +4,7 @@ title:      Mathematics Developers Survey
 date:       2017-06-12 23:30:00
 summary:    Mathematics Developers Survey (a Bayesian approach).
 categories: statistics
-thumbnail:
+thumbnail: density
 tags:
  - bayesian
  - inference
