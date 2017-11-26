@@ -4,8 +4,8 @@ email: nejc.ilenic@gmail.com
 description: "A personal blog."
 baseurl: ""
 url: "https://inejc.github.io"
-title_description: "Computer scientist focused on ML, stats, and data in general. I enjoy participating in <a href=\"https://www.kaggle.com/nejc92\" target=\"_blank\">Kaggle competitions</a>."
-title_image: "https://pbs.twimg.com/profile_images/900305982106021892/vOzewaQq_400x400.jpg"
+title_description: "Computer scientist focused on ML, stats, and data in general. Aspiring data scientist. I enjoy participating in <a href=\"https://www.kaggle.com/nejc92\" target=\"_blank\">Kaggle competitions</a>."
+title_image: "https://pbs.twimg.com/profile_images/934065701760978945/iH5xRxQA_400x400.jpg"
 google_analytics: "UA-104422096-1"
 disqus_account:
 github_repository: https://github.com/inejc/inejc.github.io
@@ -16,16 +16,15 @@ post_limit: 5
 twitter_username: nejcilenic
 github_username: inejc
 instagram_username:
-reddit_username: inejc
+reddit_username:
 linkedin_link: https://www.linkedin.com/in/nejc-ilenic
 google_plus_link:
-stackoverflow_link: https://stackoverflow.com/users/4517300/inejc
+stackoverflow_link:
 xing_link:
 facebook_link:
 
 # Footer
-footer_left: "By <a href=\"https://github.com/inejc\">Nejc Ilenic</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/inejc/inejc.github.io\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+footer: "<i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i> &nbsp;<a href=\"mailto:nejc.ilenic@gmail.com\">nejc.ilenic@gmail.com</a>"
 
 # Build settings
 markdown: kramdown

@@ -11,20 +11,20 @@ tags:
  - inference
 ---
 
-### Introduction
+## Introduction
 Anonymized responses from Stack Overflow Annual Developer Survey are published each year along the results to encourage their further analysis. I was curious about where in the world and in which domain a data scientist should start her career, and thus attempted to answer some of the relevant questions by analyzing the available data.
 
 An important thing to note when interpreting the results is that this dataset may not be a representative sample from the population of mathematics developers. One should keep in mind that these are developers who were aware of the survey and were willing to answer the questions.
 
-### Data preparation
+## Data preparation
 The dataset was constructed from a survey that took place from January 7 to January 25, 2016, with responses originating from Stack Overflow, Stack Exchange technical sites, Facebook and Twitter. Most of the questions are demographic or relating to professional work and technology. Raw data consist of 56030 samples and 66 features, all of which are optional.
 
 In order to obtain an adequately sizable sample, I've decided to include all respondents that belong to the occupation group of mathematics developers. This includes data scientists, machine learning developers and developers with statistics and mathematics backgrounds. After filtering out other occupations and responses with unknown countries there are 2132 samples left for analysis.
 
-### Exploratory analysis
+## Exploratory analysis
 We are primarily interested in answering two questions: where in the world and in which domains (industries) mathematics developers love their jobs the most. Additionally, we want to learn how job satisfaction depends on other factors like compensation, age, gender, etc. We will attempt to answer the first two questions by comparing a level of satisfaction across groups, and the last one by estimating linear relationships between variables.
 
-#### Job satisfaction among countries
+### Job satisfaction among countries
 Number of mathematics developers per country can be seen in **Figure 1**. A minimum number of 35 respondents is required to take a country into account and all others are placed into a single group called _Other_. Note that selected countries and number of answers may be different when doing inference of specific features due to missing values (i.e. optional answers in the survey). Majority of respondents are from _United States_, followed by a combination of countries with less than 35 developers, _United Kingdom_, _Germany_ and _India_.
 
 <p align="center">
@@ -52,7 +52,7 @@ The result of the sampling is depicted in **Figure 3**. Plotted are 90% confiden
     <b align="center">Figure 3: 90% confidence intervals for posterior probabilities of the answer <i>I love my job</i> for all countries.</b>
 </p>
 
-#### Explanatory variables for job satisfaction
+### Explanatory variables for job satisfaction
 Here we are concerned with how job satisfaction varies with a set of selected variables. Specifically, we are interested in how person's age, gender, purchasing power, whether she works remotely, values unit testing, commits code at least once a day, and whether she works in a big company and has a PhD explain the level of their job satisfaction. Age and purchasing power are continuous and all other variables are binary. It should be stated that purchasing power is calculated as compensation in dollars divided by a Big Mac index of the respondent's country (an informal way of measuring the purchasing power parity, i.e. how many Big Macs a person can buy per year), and company is regarded big if number of employees is more than 99. All other variables should be quite self-explanatory.
 
 This time we will treat the outcome (5 possible answers as before) as an ordinal variable (i.e. categorical for which values are ordered, but the distances between them are unknown) to preserve information regarding the order. Ordinal logistic regression with uninformative priors is our model of choice here. Again 5000 posterior samples are drawn using an MCMC algorithm with 400 warmup iterations. Again it seems that all the chains have converged (refer to traceplots and MCMC summaries on [GitHub](https://github.com/inejc/math-devs-survey)).
@@ -78,7 +78,7 @@ Next, we examine posterior regression coefficients' 90% confidence intervals in 
     <b align="center">Figure 6: 90% confidence intervals for posterior regression coefficients of selected explanatory variables for job satisfaction.</b>
 </p>
 
-#### Purchasing power among countries
+### Purchasing power among countries
 We will compare purchasing power among countries as results in the previous section strongly suggest its positive correlation with job satisfaction. In spite of that, one should bear in mind that the highest purchasing power doesn't imply the highest job satisfaction and that the opposite case can occur just as well. There may be other (latent, or even unmeasured) factors that we have not taken into account and have stronger (negative) correlation with job satisfaction. The only conclusions we will be able to draw based on results from this section are regarding the purchasing power itself.
 
 In **Figure 7** we can see the observed densities of purchasing power for all countries. Based on the plots it seems that gamma or Weibull models would be appropriate for this random variable, however as we are only interested in comparing means across groups, we can use the normal model (central limit theorem). Additionally, we turn to the hierarchical normal model to combine the information from all countries (see shrinkage in hierarchical models).
@@ -106,7 +106,7 @@ In next sections, the same comparisons for job satisfaction and purchasing power
     <b align="center">Figure 9: 90% confidence intervals for purchasing power posterior means for all countries.</b>
 </p>
 
-#### Job satisfaction among industries
+### Job satisfaction among industries
 Number of mathematics developers per industry is displayed in **Figure 10**. As before, a minimum number of 35 respondents is required to take an industry into account and all others are placed into a single group called _Other_.
 
 <p align="center">
@@ -128,7 +128,7 @@ The result of the sampling is shown in **Figure 12**. Plotted are 90% confidence
     <b align="center">Figure 12: 90% confidence intervals for posterior probabilities of the answer <i>I love my job</i> for all industries.</b>
 </p>
 
-#### Purchasing power among industries
+### Purchasing power among industries
 
 Posterior predictive check for the hierarchical normal model is in **Figure 13**. Sampling distributions of means of posterior predictive samples (of the same sizes as the observed samples) are plotted beside the observed means. Again, there are no noticeable discrepancies between the replicated and the observed data.
 
@@ -144,7 +144,7 @@ The result of the sampling is available in **Figure 14**. Plotted are 90% confid
     <b align="center">Figure 14: 90% confidence intervals for purchasing power posterior means for all industries.</b>
 </p>
 
-### Conclusion
+## Conclusion
 In this project, we compared job satisfaction of mathematics developers and mean purchasing power among countries and industries. Additionally, we were interested in how job satisfaction varies with a set of selected variables.
 
 We suspect that age and working in a big company are negatively correlated with job satisfaction, we suspect that working remotely is positively correlated with job satisfaction, and we are quite certain that purchasing power is positively correlated with job satisfaction. Our degree of belief is quite high that mean purchasing power is the highest in _Australia_ and _United States_. We also believe that mean purchasing power is the highest in the _Finance/Banking_ industry and that it is also much higher than in _Education_.
